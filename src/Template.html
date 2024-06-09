@@ -47,16 +47,178 @@
       a:hover {
         text-decoration: underline;
       }
+      .exp-description > p {
+        text-align: justify;
+      }
+      .exp-item {
+        margin-top: 10px;
+      }
     </style>
     <header">
       <div class="text-center">
         <h1 class="text-xl font-bold">Yury Badalyants</h1>
         <p>
-        Auckland, New Zealand • <a href="mailto:lmnet89@gmail.com">lmnet89@gmail.com</a> • <a href="https://www.linkedin.com/in/lmnet/">LinkedIn</a> • <a href="https://github.com/LMnet">Github</a> • <a href="https://twitter.com/lmnet89">Twitter</a>
+        Auckland, New Zealand • <a href="mailto:lmnet89@gmail.com" target="blank">lmnet89@gmail.com</a> • <a href="https://www.linkedin.com/in/lmnet/" target="blank">LinkedIn</a> • <a href="https://github.com/LMnet" target="blank">Github</a> • <a href="https://twitter.com/lmnet89" target="blank">Twitter</a>
         </p>
       </div>
     </header>
     <main>
+      <section id="experience">
+        <h2 class="text-2xl font-semibold -mb-1">Work Experience</h2>
+        <hr class="border-black border-t-[3px]" />
+
+        <div id="exp-parrot" class="exp-item">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3>
+                <b><a href="https://www.parrotanalytics.com" target="blank">Parrot Analytics.</a> Senior Software Engineer.</b>
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Nov 2022 &mdash; Present</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+            Combination of backend development (Java) and data engineering (Scala, Python). Backends were mostly scrappers for sites like YouTube, Tumblr, Wiki, etc. Mainly worked as a data engineer: Spark, Airflow, Redshift, MySQL, DuckDB. Everything was in AWS: S3, RDS, EMR, Dynamo, OpenSearch, Kinesis, etc.
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-2gis" class="exp-item">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3>
+                <b><a href="https://2gis.ru" target="blank">2gis.</a> Senior → Lead Software Engineer.</b>
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Oct 2016 &mdash; Nov 2022</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+            The main product of the 2gis is online maps. I worked in 2 teams:
+            </p>
+            <p>
+            1.Ads + Big Data team. Mostly worked on a HTTP backend for serving personalized ads. Also I created a kafka-to-hdfs connector with the exactly-once delivery semantic using akka-streams. Occasionally worked with Spark. Techologies: Akka, Kafka, Spark, Hadoop.
+            </p>
+            <p>
+            2. Since Nov 2018 — the team focused on displaying products (goods) on the map. Participated in an architecture design of a whole new project from the start. Did a massive impact on a system in general, as well as designed and implemented a few crucial components.
+            </p>
+            <p>
+            The system was designed as a group of microservices, which are mostly streaming services based on Kafka. Some of them were built with the kafka-streams. But most of the scala services were written in a purely functional manner using Typelevel libraries: cats, cats-effect (with the tagless-final), fs2, fs2-kafka, doobie, etc.
+            </p>
+            <p>
+            Also, I used RabbitMQ, PostgreSQL, RocksDB, and ElasticSearch occasionally.
+            </p>
+            <p>
+            Eventually, I’ve become a lead developer: partially team management (resource planning, product planning, project management), hiring, mentoring (including internal Scala courses).
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-datamonsters" class="exp-item">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3>
+                <b><a href="https://www.datamonsters.com" target="blank">Datamonsters.</a> Software Engineer.</b>
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Jun 2015 &mdash; Oct 2016</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+            Participated in a few projects. Mostly worked on a mobile messenger. It was a full-stack Scala development: Scala on the backend, Scala.js (through Cordova) on the frontend. Techs: Scala, Scala.js, Cordova, Akka, Play, RethinkDB
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-xored" class="exp-item">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3>
+                <b><a href="https://www.xored.com" target="blank">Xored.</a> Software Engineer.</b>
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Oct 2014 &mdash; Jun 2015</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+            Worked on the Cisco XMP Topology: it’s a network topology visualization project. Backend: Java, Spring, Hibernate. Frontend: JavaScript, Dojo, TomSawyer, mxGraph.
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-pinpay" class="exp-item">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3>
+                <b><a href="https://www.linkedin.com/company/vinus---pinpay-express/" target="blank">PinPay express.</a> Software Developer → Team Lead.</b>
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Jul 2013 &mdash; Sep 2014</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+            Worked on 2 projects (~50/50):
+            </p>
+            <p>
+            1. JavaScript-based (webkit) GUI of the ATM (which was mostly a C++ Qt project).
+            </p>
+            <p>
+            2. Java EE processing backend. Techs: Java, Spring, Hibernate, OracleDB.
+            </p>
+            <p>
+            At some point I became a team leader: project management, architecture, mentoring. Introduced a continuous integration pipeline (using Jenkins), SVN to git migration, massively improved documentation processes.
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-diasoft" class="exp-item">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3>
+                <b><a href="https://diasoft.com" target="blank">Diasoft.</a> Java Developer.</b>
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Apr 2013 &mdash; Jul 2013</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+            Java fintech: Java EE, SOAP, OracleDB, MsSQL, DB2, Sybase.
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-saytostroy" class="exp-item">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3>
+                <b>Saytostroy. Web Developer.</b>
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Feb 2012 &mdash; Mar 2013</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+            Small web-studio: LAMP stack, HTML, JavaScript.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
       <section id="education">
         <h2 class="text-2xl font-semibold -mb-1">Education</h2>
         <hr class="border-black border-t-[3px]" />
@@ -78,7 +240,7 @@
           </div>
           <ul class="list-inside list-disc px-4 pr-24">
             <li>
-              <strong>Coursework:</strong> Your coursework 
+              <strong>Coursework:</strong> Your coursework
             </li>
             <li>
               <strong>Clubs:</strong> Your clubs
@@ -86,70 +248,6 @@
           </ul>
         </div>
       </section>
-      <section id="experience">
-        <h2 class="text-2xl font-semibold -mb-1">Work Experience</h2>
-        <hr class="border-black border-t-[3px]" />
-
-        <div id="exp-parrot">
-          <div class="flex flex-row justify-between items-end">
-            <div>
-              <h3>
-                <b><a href="https://www.parrotanalytics.com">Parrot Analytics</a>. Senior Software Engineer.</b>
-              </h3>
-            </div>
-            <div>
-              <p class="italic">Nov 2022 &mdash; Present</p>
-            </div>
-          </div>
-          <div>
-            <p>
-            Combination of backend development (Java) and data engineering (Scala, Python). Backends were mostly scrappers for sites like YouTube, Tumblr, Wiki, etc. Mainly worked as a data engineer: Spark, Airflow, Redshift, MySQL, DuckDB. Everything was in AWS: S3, RDS, EMR, Dynamo, OpenSearch, Kinesis, etc.
-            </p>
-          </div>
-
-          <ul class="list-disc list-inside px-4">
-            <li>
-              Bullet point 1
-            </li>
-            <li>
-              Bullet point 2
-            </li>
-            <li>
-              Bullet point 3
-            </li>
-          </ul>
-        </div>
-
-      </section>
-
-      <section id="leadership">
-        <h2 class="text-2xl font-semibold -mb-1">Leadership</h2>
-        <hr class="border-black border-t-[3px]" />
-
-      <div id="veo">
-        <div class="flex flex-row justify-between items-end">
-          <div>
-            <h3>
-              <strong>Virginia Entrepreneurship Organization, </strong> University
-              of Virginia
-            </h3>
-            <p class="italic">Vice President of Events</p>
-          </div>
-          <div>
-            <p class="italic">November 2023 &mdash; Present</p>
-          </div>
-        </div>
-
-        <ul class="list-disc list-inside px-4">
-          <li>
-            Organized a pitch competition with 10 teams and $1,000 in prizes.
-          </li>
-          <li>
-            Coordinated speaker events with local entrepreneurs with over 50
-            attendees.
-          </li>
-        </ul>
-      </div>
 
       <section id="projects">
         <h2 class="text-2xl font-semibold -mb-1">Projects</h2>
