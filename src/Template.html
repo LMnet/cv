@@ -33,37 +33,27 @@
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <head>
-    <title>Your name - Resume</title>
+    <title>Yury Badalyants — CV</title>
     <meta
       name="description"
-      content="Your name is a student at the Your UNIVERSITY name studying Your MAJOR interested in Your INTERESTS."
+      content="Yury Badalyants — CV"
     />
   </head>
   <body class="leading-snug font-serif print-mimic">
-    <div behavior="scroll" direction="left" class="print-hide p-10 border-black border-4">
-      <h1 class="text-2xl font-bold tracking-tight">Make your own resume with this template </h1>
-      <p>All it takes it just four easy steps!</p>
-      <ol class="list-decimal list-inside">
-        <li>Copy this code</li>
-        <li>Replace the placeholder text with your information</li>
-        <li>Print the page</li>
-        <li>Save as PDF</li>
-      </ol>
-    </div>
-    <header class="grid grid-cols-3">
-      <div class="col-span-1 col-start-2 flex flex-col text-center">
-        <h1 class="text-xl font-bold">Your name</h1>
-        <a href="mailto:Your email@gmail.com class="font-bold"
-          >Your email@gmail.com</a
-        >
-        <a href="tel:Your PHONE #">Your phone #</a>
-      </div>
-
-      <div class="my-auto text-right flex flex-col">
-        <a href="Your GitHub account">github.com/Your GitHub</a>
-        <a href="Your LinkedIn account"
-          >linkedin.com/in/Your LinkedIn</a
-        >
+    <style>
+      a {
+        color: rgb(37, 99, 235);
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <header">
+      <div class="text-center">
+        <h1 class="text-xl font-bold">Yury Badalyants</h1>
+        <p>
+        Auckland, New Zealand • <a href="mailto:lmnet89@gmail.com">lmnet89@gmail.com</a> • <a href="https://www.linkedin.com/in/lmnet/">LinkedIn</a> • <a href="https://github.com/LMnet">Github</a> • <a href="https://twitter.com/lmnet89">Twitter</a>
+        </p>
       </div>
     </header>
     <main>
@@ -97,21 +87,24 @@
         </div>
       </section>
       <section id="experience">
-        <h2 class="text-2xl font-semibold -mb-1">Experience</h2>
+        <h2 class="text-2xl font-semibold -mb-1">Work Experience</h2>
         <hr class="border-black border-t-[3px]" />
 
-        <div id="exp-gpu-research">
+        <div id="exp-parrot">
           <div class="flex flex-row justify-between items-end">
             <div>
               <h3>
-                <strong>School of Engineering and Applied Science,</strong> University
-                of Virginia
+                <b><a href="https://www.parrotanalytics.com">Parrot Analytics</a>. Senior Software Engineer.</b>
               </h3>
-              <p class="italic">Researcher</p>
             </div>
             <div>
-              <p class="italic">December 1989 &mdash; Present</p>
+              <p class="italic">Nov 2022 &mdash; Present</p>
             </div>
+          </div>
+          <div>
+            <p>
+            Combination of backend development (Java) and data engineering (Scala, Python). Backends were mostly scrappers for sites like YouTube, Tumblr, Wiki, etc. Mainly worked as a data engineer: Spark, Airflow, Redshift, MySQL, DuckDB. Everything was in AWS: S3, RDS, EMR, Dynamo, OpenSearch, Kinesis, etc.
+            </p>
           </div>
 
           <ul class="list-disc list-inside px-4">
