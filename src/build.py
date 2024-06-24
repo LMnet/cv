@@ -96,7 +96,7 @@ My primary focus is on developing high-load systems, big data processing systems
 """
 
 scala_open_source = """
-Throughout my career, I have contributed to open-source projects, including co-maintainense of popular libraries such as testcontainers-scala and fs2-kafka, and occassional contributions to significant projects such as Kafka, Airflow, Cats, and others. 
+Throughout my career, I have contributed to open-source projects, including co-maintenance of popular libraries such as testcontainers-scala and fs2-kafka, and occasional contributions to significant projects such as Kafka, Airflow, and Cats.
 """
 
 talks_and_podcasts = """
