@@ -90,17 +90,15 @@ Small web-studio: LAMP stack, HTML, JavaScript.
 """
 
 hr_friendly_description = """
-I am a highly experienced and versatile software engineer with a strong background in backend development, data engineering, and full-stack development. My skills include working with various programming languages such as Scala, Java, JavaScript, and Python. I have a deep understanding of both functional and object-oriented programming paradigms. I have successfully led teams, managed projects, and mentored junior developers, ensuring the delivery of high-quality software solutions.
+I am a highly experienced and versatile software engineer with a strong background in backend development, data engineering, and full-stack development. My skills include working with various programming languages such as Scala, Java, JavaScript, and Python, and I have a deep understanding of both functional and object-oriented programming paradigms. I have successfully led teams, managed projects, and mentored junior developers, ensuring the delivery of high-quality software solutions.
 
-I focus on developing high-load systems, big data processing systems, and building robust, maintainable solutions. I have experience in designing and implementing scalable microservices architectures and have a strong background in data processing and analytics. I enjoy working in collaborative environments and am effective in bridging the gap between technical and non-technical stakeholders to ensure the successful alignment of development efforts with organizational goals.
-
-I excel in environments that leverage cutting-edge technologies and value continuous improvement and innovation. My experience in designing and implementing scalable (micro)services architectures, coupled with a strong background in data processing and analytics, enables me to drive impactful solutions that meet business objectives. I enjoy working in collaborative environments and strive to contribute effectively to team success.
+My primary focus is on developing high-load systems, big data processing systems, and building robust, maintainable solutions. Thriving in environments that leverage cutting-edge technologies and value continuous improvement, I excel in collaborative settings and strive to contribute effectively to team success. With extensive experience in designing and implementing scalable (micro)services architectures, batch and streaming data processing pipelines, and distributed systems, I drive impactful solutions that meet business objectives.
 """
 
 scala_open_source = """
-Throughout my career, I have contributed to open-source projects, including co-maintainense of popular libraries such as testcontainers-scala and fs2-kafka, and occassional contributions to projects such as Kafka, Cats, Monix, Airflow, and others. 
+Throughout my career, I have contributed to open-source projects, including co-maintainense of popular libraries such as testcontainers-scala and fs2-kafka, and occassional contributions to significant projects such as Kafka, Airflow, Cats, and others. 
 """
 
 talks_and_podcasts = """
-As an active community member, I co-host Scala and functional programming podcasts and have delivered several talks at industry conferences.
+As an advocate for knowledge sharing and an active community member, I co-host Scala and functional programming podcasts and have delivered several talks at industry conferences.
 """
