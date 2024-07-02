@@ -36,9 +36,9 @@ texts = ns(
             """,
 
         detailed_main = """
-            I am a highly experienced and versatile software engineer with a strong background in backend development, data engineering, and full-stack development. My skills include working with various programming languages such as Scala, Java, JavaScript, and Python, and I have a deep understanding of both functional and object-oriented programming paradigms. I have successfully led teams, managed projects, and mentored junior developers, ensuring the delivery of high-quality software solutions.
-            
-            My primary focus is on developing high-load systems, big data processing systems, and building robust, maintainable solutions. Thriving in environments that leverage cutting-edge technologies and value continuous improvement, I excel in collaborative settings and strive to contribute effectively to team success. With extensive experience in designing and implementing scalable (micro)services architectures, batch and streaming data processing pipelines, and distributed systems, I drive impactful solutions that meet business objectives.
+            I am a highly experienced and versatile software engineer with a strong background in backend development, data engineering, and full-stack development. My skills include working with various programming languages such as Scala, Java, JavaScript, and Python, and I have a deep understanding of both functional and object-oriented programming paradigms. I have successfully led teams, managed projects, and mentored developers, ensuring the delivery of high-quality software solutions.
+        
+            My primary focus is on developing high-load systems, big data processing systems, and building robust, maintainable solutions. With expertise in designing and implementing scalable microservices architectures, batch and streaming data processing pipelines, and distributed systems, I create effective solutions that meet business goals. My extensive experience with both pragmatic and bleeding-edge technologies allows me to adapt to different project needs effectively.
             """,
 
         scala_open_source = """
