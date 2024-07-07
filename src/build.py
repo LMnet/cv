@@ -57,7 +57,7 @@ texts = ns(
         Combination of backend development (Java) and data engineering (Scala, Python). Backends were mostly scrappers for sites like YouTube, Tumblr, Wiki, etc. Also, I have been improving a complex Bittorrent system.
         </p>
         <p>  
-        Mainly worked as a data engineer: Spark, Airflow, Redshift, MySQL, DuckDB. Everything was in AWS: S3, RDS, EMR, Dynamo, OpenSearch, Kinesis, etc.
+        On the data engineering side: Spark, Airflow, Redshift, MySQL, DuckDB. Everything was in AWS: S3, RDS, EMR, Dynamo, OpenSearch, Kinesis, etc.
         </p>
         """,
 
@@ -66,10 +66,13 @@ texts = ns(
         Combination of backend development and data engineering. On the backend side, I primarily worked with Java, developing and supporting scrapers for various sites such as YouTube, Tumblr, and Wikipedia. Additionaly, I have been improving a complex Bittorrent system that gets information about user's activity.
         </p>
         <p>
-        Most of the time I've been focusing on data engineering work. It was mostly Scala and Python development. I handled large-scale data processing and analytics using technologies like Apache Spark, Apache Airflow, Amazon Redshift, MySQL, and DuckDB. I introduced and migrated all team's pipelines to Airflow. And was de-facto an administrator of company's Redshift cluster.
+        Data engineering was mostly Scala development with a bit of Python. I handled large-scale data processing and analytics using technologies like Apache Spark, Apache Airflow, Amazon Redshift, MySQL, and DuckDB. I introduced and migrated all team's pipelines to Airflow. And was de-facto the administrator of company's Redshift cluster.
         </p>
         <p>
         The projects were hosted on AWS, utilizing a wide array of its services including S3, RDS (MySQL and PostgreSQL), EMR, DynamoDB, OpenSearch, and Kinesis.
+        </p>
+        <p>
+        Among the interesting tasks I can mention a custom query language I've built on top of ElasticSearch. Also I initiated and migrated team's codebase into a monorepo, which greatly improved development experience.  
         </p>
         """,
     ),
@@ -115,7 +118,7 @@ texts = ns(
             """,
         detailed = """
             <p>
-            Mostly have been working on the Cisco XMP Topology project (part of the Cisco Prime Infrastructure platform). 
+            Mostly have been working on the Cisco XMP Topology project (part of the Cisco Prime Infrastructure platform).
             </p>
             <p>
             The project is designed for visualizing network topologies. Backend technologies included Java, Spring, and Hibernate. The frontend was built using Dojo. Initially, the TomSawyer project was used for graph visualization but later it was switched to fully client-side rendering with mxGraph and a REST-like interface on the backend.
