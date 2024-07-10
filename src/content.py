@@ -25,17 +25,7 @@ texts = ns(
     """,
 
 
-    parrot = ns(
-        consice = """
-        <p>
-        Combination of backend development (Java) and data engineering (Scala, Python). Backends were mostly scrappers for sites like YouTube, Tumblr, Wiki, etc. Also, I have been improving a complex Bittorrent system.
-        </p>
-        <p>  
-        On the data engineering side: Spark, Airflow, Redshift, MySQL, DuckDB. Everything was in AWS: S3, RDS, EMR, Dynamo, OpenSearch, Kinesis, etc.
-        </p>
-        """,
-
-        detailed = """
+    parrot = """
         <p>
         Combination of backend development and data engineering. On the backend side, I primarily worked with Java, developing and supporting scrapers for various sites such as YouTube, Tumblr, and Wikipedia. Additionaly, I have been improving a complex Bittorrent system that gets information about user's activity.
         </p>
@@ -49,7 +39,6 @@ texts = ns(
         Among the interesting tasks I can mention a custom query language I've built on top of ElasticSearch. Also I initiated and migrated team's codebase into a monorepo, which greatly improved development experience.  
         </p>
         """,
-    ),
 
     dgis = """
         <p>
@@ -72,87 +61,47 @@ texts = ns(
         </p>
         """,
 
-    datamonsters = ns(
-        consice = """
-            Participated in a few projects. Mostly worked on a mobile messenger. This was a full-stack Scala development: Scala on the backend, Scala.js (through Cordova) on the frontend. Techs: Scala, Scala.js, Cordova, Akka, Play, RethinkDB.
-            """,
-        detailed = """
-            <p>
-            I participated in several projects, with the majority of my work focused on a mobile messenger project. This was a full-stack Scala development: Scala with Akka on the backend, and Scala.js (through Cordova) on the frontend. RethinkDB was used as the main database. The project was developed from scratch, and I was involved in both architecture design and functionality development.
-            </p>
-            <p>
-            Other projects mainly included backend development using Scala, Akka, and Play framework with AWS infrastructure. Specifically, DynamoDB was used.
-            </p>
-            """,
-    ),
+    datamonsters = """
+        <p>
+        I participated in several projects, with the majority of my work focused on a mobile messenger project. This was a full-stack Scala development: Scala with Akka on the backend, and Scala.js (through Cordova) on the frontend. RethinkDB was used as the main database. The project was developed from scratch, and I was involved in both architecture design and functionality development.
+        </p>
+        <p>
+        Other projects mainly included backend development using Scala, Akka, and Play framework with AWS infrastructure. Specifically, DynamoDB was used.
+        </p>
+        """,
 
-    xored = ns(
-        consice = """
-            Worked on the Cisco XMP Topology: it’s a network topology visualization project. Backend: Java, Spring, Hibernate. Frontend: JavaScript, Dojo, TomSawyer, mxGraph.
-            """,
-        detailed = """
-            <p>
-            Mostly have been working on the Cisco XMP Topology project (part of the Cisco Prime Infrastructure platform).
-            </p>
-            <p>
-            The project is designed for visualizing network topologies. Backend technologies included Java, Spring, and Hibernate. The frontend was built using Dojo. Initially, the TomSawyer project was used for graph visualization but later it was switched to fully client-side rendering with mxGraph and a REST-like interface on the backend.
-            </p>
-            """,
-    ),
+    xored = """
+        <p>
+        Mostly have been working on the Cisco XMP Topology project (part of the Cisco Prime Infrastructure platform).
+        </p>
+        <p>
+        The project is designed for visualizing network topologies. Backend technologies included Java, Spring, and Hibernate. The frontend was built using Dojo. Initially, the TomSawyer project was used for graph visualization but later it was switched to fully client-side rendering with mxGraph and a REST-like interface on the backend.
+        </p>
+        """,
 
-    pinpay = ns(
-        consice = """
-            <p>
-            Worked on 2 projects (~50/50):
-            </p>
-            <p>
-            1. JS-based GUI (WebKit engine) of the ATM (which was mostly a C++ Qt project).
-            </p>
-            <p>
-            2. Java EE processing backend. Techs: Java, Spring, Hibernate, OracleDB.
-            </p>
-            <p>
-            At some point I became a team leader: project management, architecture, mentoring. Introduced a continuous integration pipeline (using Jenkins), SVN to git migration, massively improved documentation processes.
-            </p>
-            """,
+    pinpay = """
+        <p>
+        The company's product was physical ATMs for all sorts of payments. 
+        </p>
+        <p>
+        I've been working mostly on 2 projects, with ~50/50 ratio:
+        </p>
+        <p>
+        1. JavaScript-based interface of the ATM. The ATM itself was a C++ Qt project, but the GUI was written using web technologies on top of WebKit engine. I've built a completely new version using more modern tech stack: Backbone, RequireJS, LESS, Grunt, a lot of HTML5 и CSS3. Built an automated testing platform with Mocha and Chai. 
+        </p>
+        <p>
+        2. Java EE processing backend. Supported a legacy version built with Java 7, Maven, Spring, Hibernate and OracleDB. Introduced unit testing with JUnit + JMockit. Later on I've designed and started to build a new version of the backend using Java 8, newer Spring 4 (core, data jpa, mvc, rest, security), and Gradle.  
+        </p>
+        <p>
+        At some point I became a team leader: project management, architecture, mentoring. Introduced a continuous integration pipeline (using Jenkins), SVN to git migration (including introduction of git-flow approach). I conducted code reviews, trained colleagues, mainly in the testing department, and initiated the documentation process for products. 
+        </p>
+        """,
 
-        detailed = """
-            <p>
-            The company's product was physical ATMs for all sorts of payments. 
-            </p>
-            <p>
-            I've been working mostly on 2 projects, with ~50/50 ratio:
-            </p>
-            <p>
-            1. JavaScript-based interface of the ATM. The ATM itself was a C++ Qt project, but the GUI was written using web technologies on top of WebKit engine. I've built a completely new version using more modern tech stack: Backbone, RequireJS, LESS, Grunt, a lot of HTML5 и CSS3. Built an automated testing platform with Mocha and Chai. 
-            </p>
-            <p>
-            2. Java EE processing backend. Supported a legacy version built with Java 7, Maven, Spring, Hibernate and OracleDB. Introduced unit testing with JUnit + JMockit. Later on I've designed and started to build a new version of the backend using Java 8, newer Spring 4 (core, data jpa, mvc, rest, security), and Gradle.  
-            </p>
-            <p>
-            At some point I became a team leader: project management, architecture, mentoring. Introduced a continuous integration pipeline (using Jenkins), SVN to git migration (including introduction of git-flow approach). I conducted code reviews, trained colleagues, mainly in the testing department, and initiated the documentation process for products. 
-            </p>
-            """,
-
-    ),
-
-    diasoft = ns(
-        consice = """
-            Java fintech: Java EE, SOAP, OracleDB, MsSQL, DB2, Sybase.
-            """,
-
-        detailed = """
+    diasoft = """
             Big fintech company. Development and support of a massive Java EE 7 product Flextera. A lot of SQL for different DBs, including OracleDB, MsSQL, DB2 and Sybase. The architecture was built on top of SOAP protocol.
             """,
-    ),
 
-    saytostroy = ns(
-        consice = """
-            Small web-studio: LAMP stack, HTML, JavaScript.
-            """,
-
-        detailed = """
+    saytostroy = """
             Small web-studio. I've been building small and medium websites using LAMP (Linux, Apache WebServer, MySQL, PHP) stack, HTML, CSS, JavaScript, jQuery and Node.js.
             """,
-    ),
 )
