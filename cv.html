@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="en">
+  <style>
+    body {
+      text-rendering: optimizeSpeed;
+      font-family: "Times New Roman", serif;
+    }
+
+    /* Styles for screen only */
+    @media screen {
+      .print-mimic {
+          width: 210mm; /* A4 paper width in mm */
+          margin: 20mm auto; /* Center the content with padding */
+          padding: 20mm;
+          border: 1px solid #000;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          background-color: #fff;
+      }
+    }
+
+    /* Styles for print only */
+    @media print {
+      .print-mimic {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+      }
+
+      .print-hide {
+        display: none;
+      }
+
+      body::after {
+        content: "Yury Badalyants, 2024";
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: right;
+        font-size: 12px;
+        font-style: italic;
+        color: #000;
+      }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <title>Yury Badalyants — CV</title>
+    <meta charset="UTF-8">
+    <meta
+      name="description"
+      content="Yury Badalyants — CV"
+    />
+  </head>
+  <body class="leading-snug print-mimic">
+    <style>
+      main {
+        font-size: 15px;
+      }
+      a {
+        color: rgb(37, 99, 235);
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .section-header {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .section-content {
+        text-align: justify;
+      }
+      .exp-item {
+        margin-top: 5px;
+      }
+      .exp-header {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    </style>
+    <header>
+      <div class="text-center">
+        <h1 class="text-3xl font-bold">Yury Badalyants</h1>
+        <p>
+          <span id="location">Auckland, New Zealand</span> • <span id="email"><a href="mailto:lmnet89@gmail.com" target="blank">lmnet89@gmail.com</a></span> • <span id="linkedin"><a href="https://www.linkedin.com/in/lmnet/" target="blank">LinkedIn</a></span> • <span id="github"><a href="https://github.com/LMnet" target="blank">Github</a></span> • <span id="twitter"><a href="https://twitter.com/lmnet89" target="blank">Twitter</a></span>
+        </p>
+      </div>
+    </header>
+    <main>
+
+      
+
+      <section id="about">
+        <div class="section-header">
+          <h2 class="text-xl font-semibold -mb-1">About Me</h2>
+          <hr class="border-black border-t-[2px]" />
+        </div>
+
+        <div class="section-content">
+          <p>
+            I am a highly experienced and versatile software engineer with a strong background in backend development, data engineering, and full-stack development. My skills include working with various programming languages such as Scala, Java, JavaScript, and Python, and I have a deep understanding of both functional and object-oriented programming paradigms. I have successfully led teams, managed projects, and mentored developers, ensuring the delivery of high-quality software solutions.
+          </p>
+          <p>
+            My primary focus is on developing high-load systems, big data processing systems, and building robust, maintainable solutions. With expertise in designing and implementing scalable microservices architectures, batch and streaming data processing pipelines, and distributed systems, I create effective solutions that meet business goals. My extensive experience with both pragmatic and bleeding-edge technologies allows me to adapt to different project needs effectively.
+          </p>
+          <p>
+            Throughout my career, I have contributed to various open-source projects, including co-maintenance of popular libraries such as testcontainers-scala and fs2-kafka, and occasional contributions to significant projects such as Kafka, Airflow, and Cats.
+          </p>
+          <p>
+            As an advocate for knowledge sharing and an active community member, I co-host Scala and functional programming podcasts <a href="https://scalalaz.ru" target="blank">Scalalaz</a> and <a href="https://flatmappers.com" target="blank">Flatmappers</a>, and have delivered several talks at industry conferences:
+            
+            <span><a href="https://www.youtube.com/watch?v=QTGtCTtIrHc" target="blank">Intro to Scala.js</a>, </span>
+            
+            <span><a href="https://youtu.be/Ln8woWsIBoI?t=2h10m7s" target="blank">Scala.js: When TypeScript is Not Enough</a>, </span>
+            
+            <span><a href="https://www.youtube.com/watch?v=AbIasjx6yPA" target="blank">Metaprogramming in Scala</a>, </span>
+            
+            <span><a href="https://www.youtube.com/watch?v=zE2sLcIeoZk" target="blank">Integration Testing of Microservices with Scala</a>, </span>
+            
+            <span><a href="https://www.youtube.com/watch?v=pCtTBUeO41w" target="blank">Pure FP: Why and How</a>, </span>
+            
+            <span><a href="https://youtu.be/wROJoMUHLck" target="blank">Production-Ready Functional Programming</a>.</span>
+            
+          </p>
+          <p>
+            <b>Education:</b> I received my B.Sc. degree in Telecommunications from <a href="https://en.nstu.ru" target="blank">NSTU</a> in 2011.
+          </p>
+          <p>
+            <b>Visa Status:</b> New Zealand Resident Visa holder.
+          </p>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-header">
+          <h2 class="text-xl font-semibold -mb-1">Work Experience</h2>
+          <hr class="border-black border-t-[2px]" />
+        </div>
+
+        <div id="exp-parrot" class="exp-item section-content">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3 class="exp-header">
+                <a href="https://www.parrotanalytics.com" target="blank">Parrot Analytics.</a> Senior Software Engineer.
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Nov 2022 &mdash; Present</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+              Combination of backend development and data engineering. On the backend side, I primarily worked with Java, developing and supporting scrapers for various sites such as YouTube, Tumblr, and Wikipedia. Additionally, I have been improving a complex BitTorrent system that gathers information about user activity.
+            </p>
+            <p>
+              Data engineering was mostly Scala development with a bit of Python. I handled large-scale data processing and analytics using technologies like Apache Spark, Apache Airflow, Amazon Redshift, MySQL, and DuckDB. I introduced and migrated all team pipelines to Airflow and was de facto the administrator of the company's Redshift cluster.
+            </p>
+            <p>
+              The projects were hosted on AWS, utilizing a wide array of its services including S3, RDS (MySQL and PostgreSQL), EMR, DynamoDB, OpenSearch, and Kinesis.
+            </p>
+            <p>
+              Among the interesting tasks, I can mention a custom query language I built on top of Elasticsearch. And I initiated and migrated the team's codebase into a monorepo, which greatly improved the development experience.
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-2gis" class="exp-item section-content">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3 class="exp-header">
+                <a href="https://2gis.ru" target="blank">2GIS.</a> Senior → Lead Software Engineer.
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Oct 2016 &mdash; Nov 2022</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+              2GIS is an online maps application (like Google Maps). I worked in two teams:
+            </p>
+            <p>
+              1. Ads + Big Data team: Mostly worked on an HTTP backend for serving personalized ads. I also created a Kafka-to-HDFS connector with exactly-once delivery semantics using Akka Streams. Occasionally worked with Spark. Technologies: Akka, Kafka, Spark, Hadoop.
+            </p>
+            <p>
+              2. Since November 2018, I have been part of the team focused on displaying products on the map. I participated in the architectural design of a whole new project from the start. I had a significant impact on the system in general and designed and implemented a few crucial components.
+            </p>
+            <p>
+              The system was designed as a group of microservices, which are mostly streaming services based on Kafka. Some of them were built with the kafka-streams. But most of them were written in a purely functional manner using Typelevel libraries: cats, cats-effect (with the tagless-final), fs2, fs2-kafka, doobie, etc.
+            </p>
+            <p>
+              Additionally, I used RabbitMQ, PostgreSQL, RocksDB, and Elasticsearch occasionally.
+            </p>
+            <p>
+              Eventually, I became a lead developer: partially team management (resource planning, product planning, project management), hiring and mentoring (including internal Scala courses).
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-datamonsters" class="exp-item section-content">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3 class="exp-header">
+                <a href="https://www.datamonsters.com" target="blank">Datamonsters.</a> Software Engineer.
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Jun 2015 &mdash; Oct 2016</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+              I participated in several projects, with the majority of my work focused on a mobile messenger project. This involved full-stack Scala development: Scala with Akka on the backend and Scala.js (through Cordova) on the frontend. RethinkDB was used as the main database. The project was developed from scratch, and I was involved in both architecture design and functionality development.
+            </p>
+            <p>
+              Other projects mainly included backend development using Scala, Akka, and the Play framework with AWS infrastructure, specifically using DynamoDB.
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-xored" class="exp-item section-content">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3 class="exp-header">
+                <a href="https://www.xored.com" target="blank">Xored.</a> Software Engineer.
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Oct 2014 &mdash; Jun 2015</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+              I primarily worked on the Cisco XMP Topology project, which is part of the Cisco Prime Infrastructure platform.
+            </p>
+            <p>
+              The project is designed for visualizing network topologies. Backend technologies included Java, Spring, and Hibernate. The frontend was built using Dojo. Initially, the TomSawyer library was used for graph visualization, but it was later switched to fully client-side rendering with mxGraph and a REST-like interface on the backend.
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-pinpay" class="exp-item section-content">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3 class="exp-header">
+                <a href="https://www.linkedin.com/company/vinus---pinpay-express/" target="blank">PinPay express.</a> Software Developer → Team Lead.
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Jul 2013 &mdash; Sep 2014</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+              The company's product was physical ATMs for various payments.
+            </p>
+            <p>
+              I worked primarily on two projects, with ~50/50 ratio:
+            </p>
+            <p>
+              1. JavaScript-based GUI for the ATM. The ATM itself was a C++ Qt project, but the GUI was written using web technologies on top of the WebKit engine. I've built a completely new version using more modern tech stack: Backbone, RequireJS, LESS, Grunt, a lot of HTML5 and CSS3. Built an automated testing platform with Mocha and Chai.
+            </p>
+            <p>
+              2. Java EE processing backend. Supported a legacy version built with Java 7, Maven, Spring, Hibernate and OracleDB. Introduced unit testing with JUnit + JMockit. Later, I designed and initiated the development of a new backend version using Java 8, newer Spring 4 (core, data jpa, mvc, rest, security), and Gradle.
+            </p>
+            <p>
+              At some point, I became a team leader: project management, architecture, mentoring. Introduced a continuous integration pipeline (using Jenkins), SVN to git migration (including an introduction of the git-flow approach). I conducted code reviews, trained colleagues, mainly in the testing department, and initiated the documentation process for products.
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-diasoft" class="exp-item section-content">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3 class="exp-header">
+                <b><a href="https://diasoft.com" target="blank">Diasoft.</a> Java Developer.</b>
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Apr 2013 &mdash; Jul 2013</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+            Big fintech company. Development and support of a massive Java EE 7 product — Flextera. Involved extensive SQL work with various databases, including OracleDB, MS SQL, DB2, and Sybase. The architecture was built on top of the SOAP protocol.
+            </p>
+          </div>
+        </div>
+
+        <div id="exp-saytostroy" class="exp-item section-content">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3 class="exp-header">
+                Saytostroy. Web Developer.
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Feb 2012 &mdash; Mar 2013</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+            Small web-studio. I've been building small and medium websites using the LAMP stack (Linux, Apache WebServer, MySQL, PHP), along with HTML, CSS, JavaScript, jQuery, and Node.js.
+            </p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </body>
+</html>

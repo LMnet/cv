@@ -4,11 +4,13 @@ from dataclasses import dataclass
 
 from jinja2.environment import Environment
 from jinja2.loaders import FileSystemLoader
+from playwright.sync_api import sync_playwright
 
+path_src = os.path.dirname(os.path.abspath(__file__))
+path_root = os.path.dirname(path_src)
+path_cv_html = f"{path_root}/cv.html"
+path_cv_cover_letter_remote_html = f"{path_root}/cv_cover_letter_remote.html"
 
-src_path = os.path.dirname(os.path.abspath(__file__))
-root_path = os.path.dirname(src_path)
-target_path = f'{root_path}/target'
 
 @dataclass
 class Link:
@@ -27,8 +29,8 @@ talks = [
 
 
 def render(with_cover_letter: bool = True) -> str:
-    env = Environment(loader=FileSystemLoader('.'))
-    template = env.get_template('Template.html')
+    env = Environment(loader=FileSystemLoader(path_src))
+    template = env.get_template("Template.html")
     return template.render(
         talks=talks,
         year=datetime.datetime.now().year,
@@ -37,17 +39,33 @@ def render(with_cover_letter: bool = True) -> str:
 
 
 def build_html():
-    os.makedirs(target_path, exist_ok=True)
-
-    with open(f"{target_path}/cv.html", "w") as file:
+    with open(path_cv_html, "w") as file:
         file.write(render(with_cover_letter=False))
 
-    with open(f"{target_path}/cv_with_cover_letter.html", "w") as file:
+    with open(path_cv_cover_letter_remote_html, "w") as file:
         file.write(render(with_cover_letter=True))
 
 
+def build_pdf(html_file_path):
+    path, _ = os.path.splitext(html_file_path)
+    pdf_file_path = f"{path}.pdf"
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(executable_path="/usr/bin/google-chrome-stable")
+
+        page = browser.new_page()
+        page.goto(f'file://{html_file_path}')
+        page.pdf(path=pdf_file_path, format='A4', margin={
+            'top': '1cm',
+            'bottom': '1cm',
+            'left': '1cm',
+            'right': '1cm'
+        })
+
+        browser.close()
+
+
 if __name__ == '__main__':
-    # print(__file__)
-    # print(os.path.abspath(__file__))
-    # print(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     build_html()
+    build_pdf(path_cv_html)
+    build_pdf(path_cv_cover_letter_remote_html)
