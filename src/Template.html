@@ -42,19 +42,30 @@
   </head>
   <body class="leading-snug font-serif print-mimic">
     <style>
+      main {
+        font-size: 15px;
+      }
       a {
         color: rgb(37, 99, 235);
       }
       a:hover {
         text-decoration: underline;
       }
-      .exp-description > p {
+      .section-header {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .section-content {
         text-align: justify;
       }
       .exp-item {
-        margin-top: 10px;
+        margin-top: 5px;
       }
-    </style>
+      .exp-header {
+        font-weight: bold;
+        font-size: 18px;
+      }
+</style>
     <header>
       <div class="text-center">
         <h1 class="text-xl font-bold">Yury Badalyants</h1>
@@ -64,15 +75,29 @@
       </div>
     </header>
     <main>
-      <section id="experience">
-        <h2 class="text-2xl font-semibold -mb-1">Work Experience</h2>
-        <hr class="border-black border-t-[3px]" />
 
-        <div id="exp-parrot" class="exp-item">
+      <section id="about">
+        <div class="section-header">
+          <h2 class="text-xl font-semibold -mb-1">About Me</h2>
+          <hr class="border-black border-t-[2px]" />
+        </div>
+
+        <div class="section-content">
+          {{ texts.about.detailed }}
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-header">
+          <h2 class="text-xl font-semibold -mb-1">Work Experience</h2>
+          <hr class="border-black border-t-[2px]" />
+        </div>
+
+        <div id="exp-parrot" class="exp-item section-content">
           <div class="flex flex-row justify-between items-end">
             <div>
-              <h3>
-                <b><a href="https://www.parrotanalytics.com" target="blank">Parrot Analytics.</a> Senior Software Engineer.</b>
+              <h3 class="exp-header">
+                <a href="https://www.parrotanalytics.com" target="blank">Parrot Analytics.</a> Senior Software Engineer.
               </h3>
             </div>
             <div>
@@ -80,17 +105,15 @@
             </div>
           </div>
           <div class="exp-description">
-            <p>
-              {{ text(texts.parrot.consice, texts.parrot.detailed) }}
-            </p>
+            {{ text(texts.parrot.consice, texts.parrot.detailed) }}
           </div>
         </div>
 
-        <div id="exp-2gis" class="exp-item">
+        <div id="exp-2gis" class="exp-item section-content">
           <div class="flex flex-row justify-between items-end">
             <div>
-              <h3>
-                <b><a href="https://2gis.ru" target="blank">2gis.</a> Senior → Lead Software Engineer.</b>
+              <h3 class="exp-header">
+                <a href="https://2gis.ru" target="blank">2gis.</a> Senior → Lead Software Engineer.
               </h3>
             </div>
             <div>
@@ -98,32 +121,15 @@
             </div>
           </div>
           <div class="exp-description">
-            <p>
-            The main product of the 2gis is online maps. I worked in 2 teams:
-            </p>
-            <p>
-            1.Ads + Big Data team. Mostly worked on a HTTP backend for serving personalized ads. Also I created a kafka-to-hdfs connector with the exactly-once delivery semantic using akka-streams. Occasionally worked with Spark. Techologies: Akka, Kafka, Spark, Hadoop.
-            </p>
-            <p>
-            2. Since Nov 2018 — the team focused on displaying products (goods) on the map. Participated in an architecture design of a whole new project from the start. Did a massive impact on a system in general, as well as designed and implemented a few crucial components.
-            </p>
-            <p>
-            The system was designed as a group of microservices, which are mostly streaming services based on Kafka. Some of them were built with the kafka-streams. But most of the scala services were written in a purely functional manner using Typelevel libraries: cats, cats-effect (with the tagless-final), fs2, fs2-kafka, doobie, etc.
-            </p>
-            <p>
-            Also, I used RabbitMQ, PostgreSQL, RocksDB, and ElasticSearch occasionally.
-            </p>
-            <p>
-            Eventually, I’ve become a lead developer: partially team management (resource planning, product planning, project management), hiring, mentoring (including internal Scala courses).
-            </p>
+            {{ texts.dgis }}
           </div>
         </div>
 
-        <div id="exp-datamonsters" class="exp-item">
+        <div id="exp-datamonsters" class="exp-item section-content">
           <div class="flex flex-row justify-between items-end">
             <div>
-              <h3>
-                <b><a href="https://www.datamonsters.com" target="blank">Datamonsters.</a> Software Engineer.</b>
+              <h3 class="exp-header">
+                <a href="https://www.datamonsters.com" target="blank">Datamonsters.</a> Software Engineer.
               </h3>
             </div>
             <div>
@@ -131,17 +137,15 @@
             </div>
           </div>
           <div class="exp-description">
-            <p>
-            Participated in a few projects. Mostly worked on a mobile messenger. It was a full-stack Scala development: Scala on the backend, Scala.js (through Cordova) on the frontend. Techs: Scala, Scala.js, Cordova, Akka, Play, RethinkDB
-            </p>
+            {{ text(texts.datamonsters.consice, texts.datamonsters.detailed) }}
           </div>
         </div>
 
-        <div id="exp-xored" class="exp-item">
+        <div id="exp-xored" class="exp-item section-content">
           <div class="flex flex-row justify-between items-end">
             <div>
-              <h3>
-                <b><a href="https://www.xored.com" target="blank">Xored.</a> Software Engineer.</b>
+              <h3 class="exp-header">
+                <a href="https://www.xored.com" target="blank">Xored.</a> Software Engineer.
               </h3>
             </div>
             <div>
@@ -149,17 +153,15 @@
             </div>
           </div>
           <div class="exp-description">
-            <p>
-            Worked on the Cisco XMP Topology: it’s a network topology visualization project. Backend: Java, Spring, Hibernate. Frontend: JavaScript, Dojo, TomSawyer, mxGraph.
-            </p>
+            {{ text(texts.xored.consice, texts.xored.detailed) }}
           </div>
         </div>
 
-        <div id="exp-pinpay" class="exp-item">
+        <div id="exp-pinpay" class="exp-item section-content">
           <div class="flex flex-row justify-between items-end">
             <div>
-              <h3>
-                <b><a href="https://www.linkedin.com/company/vinus---pinpay-express/" target="blank">PinPay express.</a> Software Developer → Team Lead.</b>
+              <h3 class="exp-header">
+                <a href="https://www.linkedin.com/company/vinus---pinpay-express/" target="blank">PinPay express.</a> Software Developer → Team Lead.
               </h3>
             </div>
             <div>
@@ -167,25 +169,14 @@
             </div>
           </div>
           <div class="exp-description">
-            <p>
-            Worked on 2 projects (~50/50):
-            </p>
-            <p>
-            1. JavaScript-based (webkit) GUI of the ATM (which was mostly a C++ Qt project).
-            </p>
-            <p>
-            2. Java EE processing backend. Techs: Java, Spring, Hibernate, OracleDB.
-            </p>
-            <p>
-            At some point I became a team leader: project management, architecture, mentoring. Introduced a continuous integration pipeline (using Jenkins), SVN to git migration, massively improved documentation processes.
-            </p>
+            {{ text(texts.pinpay.consice, texts.pinpay.detailed) }}
           </div>
         </div>
 
-        <div id="exp-diasoft" class="exp-item">
+        <div id="exp-diasoft" class="exp-item section-content">
           <div class="flex flex-row justify-between items-end">
             <div>
-              <h3>
+              <h3 class="exp-header">
                 <b><a href="https://diasoft.com" target="blank">Diasoft.</a> Java Developer.</b>
               </h3>
             </div>
@@ -194,17 +185,15 @@
             </div>
           </div>
           <div class="exp-description">
-            <p>
-            Java fintech: Java EE, SOAP, OracleDB, MsSQL, DB2, Sybase.
-            </p>
+            {{ text(texts.diasoft.consice, texts.diasoft.detailed) }}
           </div>
         </div>
 
-        <div id="exp-saytostroy" class="exp-item">
+        <div id="exp-saytostroy" class="exp-item section-content">
           <div class="flex flex-row justify-between items-end">
             <div>
-              <h3>
-                <b>Saytostroy. Web Developer.</b>
+              <h3 class="exp-header">
+                Saytostroy. Web Developer.
               </h3>
             </div>
             <div>
@@ -212,66 +201,10 @@
             </div>
           </div>
           <div class="exp-description">
-            <p>
-            Small web-studio: LAMP stack, HTML, JavaScript.
-            </p>
+            {{ text(texts.saytostroy.consice, texts.saytostroy.detailed) }}
           </div>
         </div>
 
-      </section>
-
-      <section id="education">
-        <h2 class="text-2xl font-semibold -mb-1">Education</h2>
-        <hr class="border-black border-t-[3px]" />
-        <div id="edu-college">
-          <div class="flex flex-row justify-between items-end">
-            <div>
-              <h3>
-                <strong><a href="https://en.nstu.ru" target="blank">NSTU</a>,</strong> Radio Engineering and Electronics faculty
-              </h3>
-              <p class="italic">
-                B.S. in Telecommunications
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about">
-        <h2 class="text-2xl font-semibold -mb-1">About me</h2>
-        <hr class="border-black border-t-[3px]" />
-
-        <div>
-          <p>
-          Open-source contributor. Co-maintained testcontainers-scala and fs2-kafka libraries. Also contributed to cats, monix, kafka and others.
-          </p>
-          <p>
-          Co-host of mostly scala-oriented podcasts scalalaz and flatmappers (both in Russian).
-          </p>
-          <p> <!-- TODO: links. Some of them are broken -->
-          Speaker: Intro to Scala.js; Scala.js: When TypeScript is not enough; Metaprogramming in Scala; Integration testing of microservices with Scala; Pure FP: why and how; Production-ready functional programming.
-          </p>
-          <p>
-          I'm currently in New Zealand and would like to know if remote work from here is possible. I'm not seeking for relocation or visa support, only remote work. If it's not an option, I'd appreciate a direct indication of that fact in the response.
-          </p>
-        </div>
-      </section>
-
-      <section id="skills">
-        <h2 class="text-2xl font-semibold -mb-1">Skills</h2>
-        <hr class="border-black border-t-[3px]" />
-
-        <ul class="px-4 pt-2">
-          <li>  <!--TODO-->
-            <strong>Languages:</strong> Your languages
-          </li>
-          <li>
-            <strong>Libraries:</strong> Your libraries
-          </li>
-          <li>
-            <strong>Certifications:</strong> Your certifications
-          </li>
-        </ul>
       </section>
     </main>
   </body>

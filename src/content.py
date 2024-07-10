@@ -7,6 +7,7 @@ class Link:
     link: str
 
 
+# TODO
 talks = [
     Link("Intro to Scala.js" "Intro to Scala.js", "https://www.youtube.com/watch?v=QTGtCTtIrHc"),
     Link("Scala.js: When TypeScript is not enough", "https://youtu.be/Ln8woWsIBoI?t=2h10m7s"),
@@ -16,37 +17,52 @@ talks = [
     Link("Production-ready functional programming", "https://youtu.be/wROJoMUHLck"),
 ]
 
+# TODO
 podcasts = [
     Link("scalalaz", "https://scalalaz.ru"),
     Link("flatmappers", "https://flatmappers.com"),
 ]
 
+
 texts = ns(
     about = ns(
+        # TODO: links
         consice = """
-            Open-source contributor. Co-maintained testcontainers-scala and fs2-kafka libraries. Also contributed to
-            kafka, cats, monix and many others.
-            
+            <p>
+            Open-source contributor. Co-maintained testcontainers-scala and fs2-kafka libraries. Also contributed to Kafka, Cats, Monix and many others.
+            </p>
+            <p>
             Co-host of scala and fp oriented podcasts scalalaz and flatmappers.
-            
-            Speaker: Intro to Scala.js; Scala.js: When TypeScript is not enough; Metaprogramming in
-            Scala; Integration testing of microservices with Scala; Pure FP: why and how; Production-ready functional
-            programming.
+            </p>
+            <p>
+            Speaker: Intro to Scala.js; Scala.js: When TypeScript is not enough; Metaprogramming in Scala; Integration testing of microservices with Scala; Pure FP: why and how; Production-ready functional programming.
+            </p>
             """,
 
-        detailed_main = """
+        detailed = """
+            <p>
             I am a highly experienced and versatile software engineer with a strong background in backend development, data engineering, and full-stack development. My skills include working with various programming languages such as Scala, Java, JavaScript, and Python, and I have a deep understanding of both functional and object-oriented programming paradigms. I have successfully led teams, managed projects, and mentored developers, ensuring the delivery of high-quality software solutions.
-        
+            </p>
+            <p>
             My primary focus is on developing high-load systems, big data processing systems, and building robust, maintainable solutions. With expertise in designing and implementing scalable microservices architectures, batch and streaming data processing pipelines, and distributed systems, I create effective solutions that meet business goals. My extensive experience with both pragmatic and bleeding-edge technologies allows me to adapt to different project needs effectively.
-            """,
-
-        scala_open_source = """
-            Throughout my career, I have contributed to open-source projects, including co-maintenance of popular libraries such as testcontainers-scala and fs2-kafka, and occasional contributions to significant projects such as Kafka, Airflow, and Cats.
-            """,
-
-        talks_and_podcasts = """
+            </p>
+            <p>
+            Throughout my career, I have contributed to various open-source projects, including co-maintenance of popular libraries such as testcontainers-scala and fs2-kafka, and occasional contributions to significant projects such as Kafka, Airflow, and Cats.
+            </p>
+            <p>
             As an advocate for knowledge sharing and an active community member, I co-host Scala and functional programming podcasts and have delivered several talks at industry conferences.
+            </p>
+            <p>
+            I received my B.Sc. degree in Telecommunications from <a href="https://en.nstu.ru" target="blank">NSTU</a> in 2011.
+            </p>
             """,
+
+        # TODO
+        new_zealand_remote = """
+            <p>
+            I'm currently in New Zealand and would like to know if remote work from here is possible. I'm not seeking for relocation or visa support, only remote work. If it's not an option, I'd appreciate a direct indication of that fact in the response.
+            </p>
+        """
     ),
 
 
