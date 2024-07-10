@@ -3,7 +3,7 @@ from functools import partial
 
 from jinja2.environment import Environment
 from jinja2.loaders import FileSystemLoader
-from content import texts
+from content import texts, talks
 
 
 class Version(Enum):
@@ -23,4 +23,4 @@ def render(version: Version = Version.DETAILED) -> str:
     env.globals['text'] = partial(text, version=version)
     env.globals['version'] = version
     template = env.get_template('Template.html')
-    return template.render(texts=texts)
+    return template.render(texts=texts, talks=talks)
