@@ -78,7 +78,7 @@
         font-weight: bold;
         font-size: 18px;
       }
-</style>
+    </style>
     <header>
       <div class="text-center">
         <h1 class="text-3xl font-bold">Yury Badalyants</h1>
@@ -88,6 +88,30 @@
       </div>
     </header>
     <main>
+
+      {% if with_cover_letter %}
+      <section id="cover-letter">
+        <div class="section-header">
+          <h2 class="text-xl font-semibold -mb-1">Cover Letter</h2>
+          <hr class="border-black border-t-[2px]" />
+        </div>
+
+        <div class="section-content">
+          <p>
+          Hello!
+          </p>
+          <p>
+          I'm interested in this position and believe my skills are a good fit.
+          </p>
+          <p>
+          I'm currently in New Zealand and would like to know if remote work from here is possible. I'm not seeking for relocation or visa support, only remote work. If it's not an option, I'd appreciate a direct indication of that fact in the response.
+          </p>
+          <p>
+          Thank you.
+          </p>
+        </div>
+      </section>
+      {% endif %}
 
       <section id="about">
         <div class="section-header">
@@ -112,7 +136,10 @@
             {% endfor %}
           </p>
           <p>
-            I received my B.Sc. degree in Telecommunications from <a href="https://en.nstu.ru" target="blank">NSTU</a> in 2011.
+            <b>Education:</b> I received my B.Sc. degree in Telecommunications from <a href="https://en.nstu.ru" target="blank">NSTU</a> in 2011.
+          </p>
+          <p>
+            <b>Visa Status:</b> New Zealand Resident Visa holder.
           </p>
         </div>
       </section>
