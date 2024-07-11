@@ -37,6 +37,7 @@ update:
   source {{BIN}}/activate
   pip install --requirement requirements.txt --constraint constraints.txt
 
+# Build everything.
 build:
   #!/usr/bin/env bash
   source {{BIN}}/activate
