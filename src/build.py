@@ -6,13 +6,11 @@ from jinja2.environment import Environment
 from jinja2.loaders import FileSystemLoader
 from playwright.sync_api import sync_playwright
 
-path_src = os.path.dirname(os.path.abspath(__file__))
-path_root = os.path.dirname(path_src)
-path_target = f"{path_root}/docs"
-path_cv_html = f"{path_target}/cv.html"
-path_cv_cover_letter_remote_html = f"{path_target}/cv_cover_letter_remote.html"
+base_url = "https://lmnet.github.io/cv"
+src_path = os.path.dirname(os.path.abspath(__file__))
+root_path = os.path.dirname(src_path)
+target_path = f"{root_path}/docs" # `/docs` because GitHub Pages requires this particular folder name
 
-# TODO: add download as pdf button to the footer
 
 @dataclass
 class Link:
@@ -30,44 +28,73 @@ talks = [
 ]
 
 
-def render(with_cover_letter: bool = True) -> str:
-    env = Environment(loader=FileSystemLoader(path_src))
-    template = env.get_template("Template.html")
-    return template.render(
-        talks=talks,
-        year=datetime.datetime.now().year,
-        with_cover_letter=with_cover_letter,
-    )
+@dataclass
+class CV:
+    name: str
+    render_config: dict | None = None
+
+    @property
+    def base_file_path(self) -> str:
+        return target_path
+
+    @property
+    def html_file_path(self) -> str:
+        return f"{self.base_file_path}/{self.name}.html"
+
+    @property
+    def pdf_file_path(self) -> str:
+        return f"{self.base_file_path}/{self.name}.pdf"
+
+    @property
+    def html_link(self) -> str:
+        return f"{base_url}/{self.name}.html"
+
+    @property
+    def pdf_link(self) -> str:
+        return f"{base_url}/{self.name}.pdf"
+
+    def render(self) -> str:
+        env = Environment(loader=FileSystemLoader(src_path))
+        template = env.get_template("Template.html")
+
+        cv_render_config = self.render_config if self.render_config else {}
+
+        render_params = {
+            'talks': talks,
+            'year': datetime.datetime.now().year,
+            'pdf_link': self.pdf_link,
+        } | cv_render_config
+
+        return template.render(render_params)
+
+    def build_html(self):
+        with open(self.html_file_path, "w") as file:
+            file.write(self.render())
+
+    def build_pdf(self):
+        with sync_playwright() as p:
+            browser = p.chromium.launch(executable_path="/usr/bin/google-chrome-stable")
+
+            page = browser.new_page()
+            page.goto(f'file://{self.html_file_path}')
+            page.pdf(path=self.pdf_file_path, format='A4', margin={
+                'top': '1cm',
+                'bottom': '1cm',
+                'left': '1cm',
+                'right': '1cm'
+            })
+
+            browser.close()
+
+    def build_all(self):
+        self.build_html()
+        self.build_pdf()
 
 
-def build_html():
-    with open(path_cv_html, "w") as file:
-        file.write(render(with_cover_letter=False))
-
-    with open(path_cv_cover_letter_remote_html, "w") as file:
-        file.write(render(with_cover_letter=True))
-
-
-def build_pdf(html_file_path):
-    path, _ = os.path.splitext(html_file_path)
-    pdf_file_path = f"{path}.pdf"
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch(executable_path="/usr/bin/google-chrome-stable")
-
-        page = browser.new_page()
-        page.goto(f'file://{html_file_path}')
-        page.pdf(path=pdf_file_path, format='A4', margin={
-            'top': '1cm',
-            'bottom': '1cm',
-            'left': '1cm',
-            'right': '1cm'
-        })
-
-        browser.close()
+main_cv = CV("cv")
+cv_cover_letter_remote = CV("cv_cover_letter_remote", {'with_cover_letter': True})
 
 
 if __name__ == '__main__':
-    build_html()
-    build_pdf(path_cv_html)
-    build_pdf(path_cv_cover_letter_remote_html)
+    main_cv.build_all()
+    cv_cover_letter_remote.build_all()
