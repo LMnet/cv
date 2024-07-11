@@ -8,9 +8,11 @@ from playwright.sync_api import sync_playwright
 
 path_src = os.path.dirname(os.path.abspath(__file__))
 path_root = os.path.dirname(path_src)
-path_cv_html = f"{path_root}/cv.html"
-path_cv_cover_letter_remote_html = f"{path_root}/cv_cover_letter_remote.html"
+path_target = f"{path_root}/cv"
+path_cv_html = f"{path_target}/cv.html"
+path_cv_cover_letter_remote_html = f"{path_target}/cv_cover_letter_remote.html"
 
+# TODO: add download as pdf button to the footer
 
 @dataclass
 class Link:
