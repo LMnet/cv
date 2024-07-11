@@ -1,5 +1,5 @@
 from http.server import HTTPServer, SimpleHTTPRequestHandler
-from build import render
+from build import main_cv
 
 
 port = 8099
@@ -10,7 +10,7 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
-        html = render()
+        html = main_cv.render()
         self.wfile.write(html.encode('utf-8'))
 
 

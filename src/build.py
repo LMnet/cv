@@ -98,3 +98,4 @@ cv_cover_letter_remote = CV("cv_cover_letter_remote", {'with_cover_letter': True
 if __name__ == '__main__':
     main_cv.build_all()
     cv_cover_letter_remote.build_all()
+    print("CV build was successful")
