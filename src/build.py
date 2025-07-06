@@ -61,7 +61,6 @@ class CV:
 
         render_params = {
             'talks': talks,
-            'year': datetime.datetime.now().year,
             'pdf_link': self.pdf_link,
         } | cv_render_config
 
@@ -75,14 +74,37 @@ class CV:
         with sync_playwright() as p:
             browser = p.chromium.launch(executable_path="/usr/bin/google-chrome-stable")
 
+            year = datetime.datetime.now().year
+            # Only inline styles work here
+            footer_template = f"""
+                <div style='
+                    width: 100%;
+                    text-align: right;
+                    font-size: 12px;
+                    font-style: italic;
+                    color: #000;
+                    padding-right: 36px;
+                    font-family: "Times New Roman", serif;
+                '>
+                    Yury Badalyants, {year}
+                </div>
+            """
+
             page = browser.new_page()
             page.goto(f'file://{self.html_file_path}')
-            page.pdf(path=self.pdf_file_path, format='A4', margin={
-                'top': '1cm',
-                'bottom': '1cm',
-                'left': '1cm',
-                'right': '1cm'
-            })
+            page.pdf(
+                path=self.pdf_file_path,
+                format='A4',
+                margin={
+                    'top': '1cm',
+                    'bottom': '1cm',
+                    'left': '1cm',
+                    'right': '1cm'
+                },
+                display_header_footer=True,
+                header_template="<span></span>",
+                footer_template=footer_template,
+            )
 
             browser.close()
 

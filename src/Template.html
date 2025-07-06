@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en">
   <style>
-    body {
+    :root {
       text-rendering: optimizeSpeed;
       font-family: "Times New Roman", serif;
     }
@@ -29,18 +29,6 @@
 
       .print-hide {
         display: none;
-      }
-
-      body::after {
-        content: "Yury Badalyants, {{ year }}";
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: right;
-        font-size: 12px;
-        font-style: italic;
-        color: #000;
       }
     }
   </style>
@@ -156,6 +144,27 @@
           <hr class="border-black border-t-[2px]" />
         </div>
 
+        <div id="exp-advicelink" class="exp-item section-content">
+          <div class="flex flex-row justify-between items-end">
+            <div>
+              <h3 class="exp-header">
+                <a href="https://lfg.co.nz/about/advice-link-2/" target="blank">AdviceLink.</a> Lead Engineer.
+              </h3>
+            </div>
+            <div>
+              <p class="italic">Dec 2024 &mdash; Present</p>
+            </div>
+          </div>
+          <div class="exp-description">
+            <p>
+              AdviceLink is a CRM platform for mortgage and insurance advisers. The backend is a monolithic Scala application based on the Play Framework, with PostgreSQL as the main database. The frontend was originally built with React via a Scala.js wrapper. The system is hosted entirely on AWS infrastructure.
+            </p>
+            <p>
+              I lead the engineering team, overseeing the full development lifecycle: architecture, implementation, code reviews, CI/CD, production deployments, and monitoring.
+            </p>
+          </div>
+        </div>
+
         <div id="exp-parrot" class="exp-item section-content">
           <div class="flex flex-row justify-between items-end">
             <div>
@@ -164,7 +173,7 @@
               </h3>
             </div>
             <div>
-              <p class="italic">Nov 2022 &mdash; Present</p>
+              <p class="italic">Nov 2022 &mdash; Dec 2024</p>
             </div>
           </div>
           <div class="exp-description">

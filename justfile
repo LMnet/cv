@@ -9,7 +9,7 @@ BIN := VENV / "bin"
 # Prepare repository for local development: setup virtual environment and install dependencies
 bootstrap:
   #!/usr/bin/env bash
-  python3.11 -m venv {{VENV}}
+  python3.13 -m venv {{VENV}}
   source {{BIN}}/activate
   pip install --requirement requirements.txt --constraint constraints.txt
 
